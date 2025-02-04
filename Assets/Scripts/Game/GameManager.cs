@@ -15,8 +15,6 @@ public class GameManager : Singleton<GameManager>
         // 게임 초기화
         InitGame();
         
-        // 테스트
-        blockController.PlaceMarker(Block.MarkerType.O, 0, 0);
     }
 
     /// <summary>
