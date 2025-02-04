@@ -10,7 +10,7 @@ public class Block : MonoBehaviour
     public enum MarkerType { None, O, X }
     
     public delegate void OnBlockClicked(int index);
-    public event OnBlockClicked onBlockClicked;
+    public OnBlockClicked onBlockClicked;
     private int _blockIndex;
 
     /// <summary>
@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
     {
         _blockIndex = blockIndex;
         SetMarker(MarkerType.None);
-        this.onBlockClicked += onBlockClicked;
+        this.onBlockClicked = onBlockClicked;
     }
     
     /// <summary>
@@ -47,6 +47,6 @@ public class Block : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        onBlockClicked?.Invoke(0);
+        onBlockClicked?.Invoke(_blockIndex);
     }
 }

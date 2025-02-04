@@ -15,6 +15,11 @@ public class GameManager : Singleton<GameManager>
         // 게임 초기화
         InitGame();
         
+        // 테스트 코드
+        blockController.OnBlockClickedDelegate = (row, col) =>
+        {
+            Debug.Log("## Row: " + row + ", Col: " + col);
+        };
     }
 
     /// <summary>
@@ -24,5 +29,8 @@ public class GameManager : Singleton<GameManager>
     {
         // _board 초기화
         _board = new PlayerType[3, 3];
+        
+        // 블록 초기화
+        blockController.InitBlocks();
     }
 }
