@@ -7,6 +7,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private BlockController blockController;
     [SerializeField] private PanelManager panelManager;
+    [SerializeField] private GameUIController gameUIController;
     
     public enum PlayerType { None, PlayerA, PlayerB }
     private PlayerType[,] _board;
@@ -40,6 +41,9 @@ public class GameManager : Singleton<GameManager>
         
         // Start Panel 표시
         panelManager.ShowPanel(PanelManager.PanelType.StartPanel);
+        
+        // Game UI 초기화
+        gameUIController.SetGameUIMode(GameUIController.GameUIMode.Init);
     }
 
     /// <summary>
@@ -57,8 +61,10 @@ public class GameManager : Singleton<GameManager>
     /// <param name="gameResult">win, lose, draw</param>
     private void EndGame(GameResult gameResult)
     {
-        // TODO: 나중에 구현!!
+        // 게임오버 표시
+        gameUIController.SetGameUIMode(GameUIController.GameUIMode.GameOver);
         
+        // TODO: 나중에 구현!!
         switch (gameResult)
         {
             case GameResult.Win:
@@ -102,7 +108,7 @@ public class GameManager : Singleton<GameManager>
         switch (turnType)
         {
             case TurnType.PlayerA:
-                Debug.Log("Player A turn");
+                gameUIController.SetGameUIMode(GameUIController.GameUIMode.TurnA);
                 blockController.OnBlockClickedDelegate = (row, col) =>
                 {
                     if (SetNewBoardValue(PlayerType.PlayerA, row, col))
@@ -121,7 +127,7 @@ public class GameManager : Singleton<GameManager>
                 
                 break;
             case TurnType.PlayerB:
-                Debug.Log("Player B turn");
+                gameUIController.SetGameUIMode(GameUIController.GameUIMode.TurnB);
                 blockController.OnBlockClickedDelegate = (row, col) =>
                 {
                     if (SetNewBoardValue(PlayerType.PlayerB, row, col))

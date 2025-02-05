@@ -2109,6 +2109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587498fb99db3834f97aa77fb097873d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroupA: {fileID: 1309287965}
+  canvasGroupB: {fileID: 59509690}
+  gameOverButton: {fileID: 1785742726}
 --- !u!1 &999412767
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,6 +3825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockController: {fileID: 1133544798}
   panelManager: {fileID: 842584429}
+  gameUIController: {fileID: 982217905}
 --- !u!4 &1522847062
 Transform:
   m_ObjectHideFlags: 0
