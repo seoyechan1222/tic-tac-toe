@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private BlockController blockController;
     [SerializeField] private PanelManager panelManager;
     
-    private enum PlayerType { None, PlayerA, PlayerB }
+    public enum PlayerType { None, PlayerA, PlayerB }
     private PlayerType[,] _board;
     
     private enum TurnType { PlayerA, PlayerB }
