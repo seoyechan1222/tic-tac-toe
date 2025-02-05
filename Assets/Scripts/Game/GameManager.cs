@@ -39,11 +39,11 @@ public class GameManager : Singleton<GameManager>
         // 블록 초기화
         blockController.InitBlocks();
         
-        // Start Panel 표시
-        panelManager.ShowPanel(PanelManager.PanelType.StartPanel);
-        
         // Game UI 초기화
         gameUIController.SetGameUIMode(GameUIController.GameUIMode.Init);
+        
+        // 게임 스타트
+        StartGame();
     }
 
     /// <summary>
