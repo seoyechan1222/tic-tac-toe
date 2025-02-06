@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     
     private BlockController _blockController;
     private GameUIController _gameUIController;
+    private Canvas _canvas;
     
     public enum PlayerType { None, PlayerA, PlayerB }
     private PlayerType[,] _board;
@@ -30,6 +31,20 @@ public class GameManager : Singleton<GameManager>
     public void ChangeToGameScene(GameType gameType)
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void ChangeToMainScene()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void OpenSettingsPanel()
+    {
+        if (_canvas != null)
+        {
+            var settingsPanelObject = Instantiate(settingsPanel, _canvas.transform);
+            settingsPanelObject.GetComponent<PanelController>().Show();
+        }
     }
 
     /// <summary>
@@ -226,5 +241,7 @@ public class GameManager : Singleton<GameManager>
             // 게임 시작
             StartGame();
         }
+        
+        _canvas = GameObject.FindObjectOfType<Canvas>();
     }
 }

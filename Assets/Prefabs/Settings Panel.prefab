@@ -680,7 +680,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ConfirmPanelController, Assembly-CSharp
+        m_TargetAssemblyTypeName: SettingsPanelController, Assembly-CSharp
         m_MethodName: OnClickCloseButton
         m_Mode: 1
         m_Arguments:
@@ -702,7 +702,8 @@ GameObject:
   - component: {fileID: 7213178117652655525}
   - component: {fileID: 1642660269795106880}
   - component: {fileID: 6718911173879980954}
-  - component: {fileID: 950409448505385821}
+  - component: {fileID: 3876433658606176419}
+  - component: {fileID: 7498579463380119278}
   m_Layer: 5
   m_Name: Settings Panel
   m_TagString: Untagged
@@ -768,7 +769,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &950409448505385821
+--- !u!114 &3876433658606176419
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -780,6 +781,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0330557cb76aa024f8cf1ed38c52c328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelRectTransform: {fileID: 7257350694580994433}
+--- !u!225 &7498579463380119278
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192463108357986988}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8419815484649971446
 GameObject:
   m_ObjectHideFlags: 0
