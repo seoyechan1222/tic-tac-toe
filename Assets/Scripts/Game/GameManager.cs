@@ -84,6 +84,7 @@ public class GameManager : Singleton<GameManager>
     {
         // 게임오버 표시
         _gameUIController.SetGameUIMode(GameUIController.GameUIMode.GameOver);
+        _blockController.OnBlockClickedDelegate = null;
         
         // TODO: 나중에 구현!!
         switch (gameResult)
