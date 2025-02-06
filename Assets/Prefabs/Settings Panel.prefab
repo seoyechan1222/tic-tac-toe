@@ -679,7 +679,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3876433658606176419}
         m_TargetAssemblyTypeName: SettingsPanelController, Assembly-CSharp
         m_MethodName: OnClickCloseButton
         m_Mode: 1
