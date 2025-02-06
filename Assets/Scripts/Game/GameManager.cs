@@ -84,6 +84,7 @@ public class GameManager : Singleton<GameManager>
     {
         // 게임오버 표시
         _gameUIController.SetGameUIMode(GameUIController.GameUIMode.GameOver);
+        _blockController.OnBlockClickedDelegate = null;
         
         // TODO: 나중에 구현!!
         switch (gameResult)
@@ -109,6 +110,8 @@ public class GameManager : Singleton<GameManager>
     /// <returns>False가 반환되면 할당할 수 없음, True는 할당이 완료됨</returns>
     private bool SetNewBoardValue(PlayerType playerType, int row, int col)
     {
+        if (_board[row, col] != PlayerType.None) return false;
+        
         if (playerType == PlayerType.PlayerA)
         {
             _board[row, col] = playerType;
