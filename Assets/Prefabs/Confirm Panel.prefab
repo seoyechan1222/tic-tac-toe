@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 3323473232052954183}
   - component: {fileID: 121785762994937950}
   - component: {fileID: 4756547589185837519}
+  - component: {fileID: 2400886025662728097}
   m_Layer: 5
   m_Name: Confirm Panel
   m_TagString: Untagged
@@ -325,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -354,7 +355,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d49298502b23b34d9820a2b115c1e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelRectTransform: {fileID: 0}
   messageText: {fileID: 3291081873565652512}
+--- !u!225 &2400886025662728097
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322007610722072902}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4456731982473467512
 GameObject:
   m_ObjectHideFlags: 0
