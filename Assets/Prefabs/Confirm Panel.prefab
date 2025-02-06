@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d49298502b23b34d9820a2b115c1e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelRectTransform: {fileID: 0}
+  panelRectTransform: {fileID: 2066725711099984302}
   messageText: {fileID: 3291081873565652512}
 --- !u!225 &2400886025662728097
 CanvasGroup:
