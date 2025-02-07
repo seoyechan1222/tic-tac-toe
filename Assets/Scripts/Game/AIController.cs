@@ -1,4 +1,6 @@
-﻿public static class AIController
+﻿using UnityEditor.Experimental.GraphView;
+
+public static class AIController
 {
     public static (int row, int col)? FindNextMove(GameManager.PlayerType[,] board)
     {
@@ -71,6 +73,7 @@
             }
         }
         
+<<<<<<< Updated upstream
         // 세로로 플레이어 마커가 두 개 이상인지 확인
         for (var col = 0; col < board.GetLength(1); col++)
         {
@@ -140,5 +143,18 @@
         }
         
         return null;
+=======
+        for (var row = 0; row < board.GetLength(0); row++)
+            if board[row, 1] == GameManager.PlayerType.PlayerA &&
+            board[row, 1] == GameManager.PlayerType.PlayerA &&
+            board[row, 1] == GameManager.PlayerType.PlayerA &&
+            board[row, 1] == GameManager.PlayerType.None)
+        return (0, 0);
+>>>>>>> Stashed changes
+    }
+    
+    for (var col = 0; col < board.GetLenth(1); col++)
+    {
+        if board[]
     }
 }
