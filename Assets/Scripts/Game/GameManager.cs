@@ -152,7 +152,8 @@ public class GameManager : Singleton<GameManager>
                 break;
             case TurnType.PlayerB:
                 _gameUIController.SetGameUIMode(GameUIController.GameUIMode.TurnB);
-                var result = AIController.FindNextMove(_board);
+                // var result = AIController.FindNextMove(_board);
+                var result = MinimaxAIController.GetBestMove(_board);
                 if (result.HasValue)
                 {
                     if (SetNewBoardValue(PlayerType.PlayerB, result.Value.row, result.Value.col))
